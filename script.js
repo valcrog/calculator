@@ -37,6 +37,9 @@ function clickButton() {
             if (classes.contains('digit')) {
                 inputOperand(buttons[i].value);
                 updateDisplay();
+            } else if (classes.contains('all-clear')) {
+                clearDisplay();
+                updateDisplay();
             }
         })
     }
@@ -58,6 +61,15 @@ function inputOperand(value) {
             displayValue += value
         }
     }
+}
+
+function clearDisplay() {
+    displayValue = '0';
+    firstOperand = null;
+    secondOperand = null;
+    firstOperator = null;
+    secondOperator = null;
+    result = null;
 }
 
 function operate(operator, a, b) {
