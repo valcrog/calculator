@@ -22,8 +22,8 @@ function divide(a, b) {
 function updateDisplay() {
     const display = document.getElementById('display');
     display.innerText = displayValue;
-    if (displayValue.length > 15) {
-        display.innerText = displayValue.substring(0, 15);
+    if (displayValue.length > 14) {
+        display.innerText = displayValue.substring(0, 14);
     }
 } 
 
