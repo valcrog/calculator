@@ -21,7 +21,6 @@ function divide(a, b) {
 
 function updateDisplay() {
     const display = document.getElementById('display');
-    console.log(display);
     display.innerText = displayValue;
     if (displayValue.length > 15) {
         display.innerText = displayValue.substring(0, 15);
@@ -29,6 +28,12 @@ function updateDisplay() {
 } 
 
 updateDisplay();
+
+document.addEventListener('keydown', (e) => {
+    console.log(e.keyCode);
+    const key = document.querySelector(`button[data-key='${e.keyCode}']`);
+    key.click();
+})
 
 function clickButton() {
     for (let i=0; i<buttons.length; i++) {
